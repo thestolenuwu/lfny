@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<style>
+	h1{
+		font-family: Arial;
+		color: black;
+	}
+</style>
+<head>
+	<title>I haven't done this in a while</title>
+</head>
+<h1><center id="demo"></center></h1>
+
+<script>
+  var d = new Date();
+  var t = d.getHours();
+  var weekday = new Array(7);
+  weekday[0] = "Live from New York, it's Sunday";
+  weekday[1] = "Live from New York, it's Monday"; 
+  weekday[2] = "Live from New York, it's Tuesday";
+  weekday[3] = "Live from New York, it's Wednesday";
+  weekday[4] = "Live from New York, it's Thursday";
+  weekday[5] = "Live from New York, it's Friday";
+  weekday[6] = "Live from New York, it's Saturday";
+
+  if (0 < t < 12){
+  	var ti = 'Morning!'
+  }
+  if (12 < t < 18){
+  	var ti = 'Afternoon!'
+  }
+  if (18 < t){
+  	var ti = 'Night!'
+  }
+
+  var n = weekday[d.getDay()];
+  var lfny = n + ' ' + ti
+  document.getElementById("demo").innerHTML = lfny;
+</script>
+</body>
+</html>
